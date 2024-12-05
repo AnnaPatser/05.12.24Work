@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+    
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+     - name: send telegram message on push
+       uses: appleboy/telegram-action@master
+       with:
+          to: ${{ secrets.181137011 }}
+          token: ${{ secrets.7549151423:AAHDeCkAOc9idbYAIM1ehO3uIqJ7kXMmEP0 }}
+          message: Пацер и Михайлова
